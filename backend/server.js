@@ -44,11 +44,16 @@ app.use("/matchWinners", matchWinners);
 app.use("/winners", winners);
 app.use("/losers", losers);
 
-app.listen(PORT, () => {
-	console.log('Server listening on ' + PORT);
-})
 
 app.get('/', (req, res) => {
     console.log('GET /frontend')
     res.send('Server says hi')
 })
+
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../build/index.html'))
+})
+	
+app.listen(PORT, () => {
+		console.log('Server listening on ' + PORT);
+	})

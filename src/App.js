@@ -8,9 +8,9 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<nav>
-					<NavLink to="/gallery" activeClassName="active"> Gallery </NavLink>
-					<NavLink to="/battle" activeClassName="active"> Battle </NavLink>
 					<Link to="/" > Start </Link>
+					<NavLink to="/battle" activeClassName="active"> Battle </NavLink>
+					<NavLink to="/gallery" activeClassName="active"> Gallery </NavLink>
 				</nav>
 			</header>
 			<main>
