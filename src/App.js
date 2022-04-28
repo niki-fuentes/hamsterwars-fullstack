@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, NavLink, Link } from 'react-router-dom'
 import './App.css';
+import Start from "./components/start/Start";
 
 function App() {
   return (
@@ -14,14 +15,13 @@ function App() {
 				</nav>
 			</header>
 			<main>
-				
-				 före 
+	
 			 <Switch>
 				 <Route path="/battle"> Battle  </Route>
 				 <Route path="/gallery"> gslly </Route>
-				 <Route path="/"> kfk </Route>
+				 <Route exact path="/">  <Start/> </Route>
 			 </Switch>
-				 efter
+				
 			</main>
     </div>
 	</Router>
