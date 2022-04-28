@@ -1,3 +1,7 @@
+Hamsterwars är ett examinerande arbete i kursen Effektiv frontend utveckling på ITHS.
+Appen går ut på att man ska kunna rösta mellan två hamstrar vilken av dom som är den gullligaste.
+Vinster och förlusten sparas i varje enskila hamsters statistik. Det finns en startsida, en sida för galleri där man kan se och läsa om varje enskilda hamster samt lägga till en nym samt själva match sidan där duellen sker. 
+
 # Getting Started with Create React App
 
 

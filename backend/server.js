@@ -16,8 +16,8 @@ const losers = require("./routes/losers");
 
 
 const PORT = process.env.PORT || 1988
-const staticFolder = path.join(__dirname, 'static')
-const imgFolder = path.join(__dirname, 'img');
+const staticFolder = path.join(__dirname, '../build')
+const imgFolder = path.join(__dirname, './src/img');
 
 //middleware
 
@@ -46,4 +46,9 @@ app.use("/losers", losers);
 
 app.listen(PORT, () => {
 	console.log('Server listening on ' + PORT);
+})
+
+app.get('/', (req, res) => {
+    console.log('GET /frontend')
+    res.send('Server says hi')
 })
