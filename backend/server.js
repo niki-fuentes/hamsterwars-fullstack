@@ -17,7 +17,7 @@ const losers = require("./routes/losers");
 
 const PORT = process.env.PORT || 1988
 const staticFolder = path.join(__dirname, '../build')
-const imgFolder = path.join(__dirname, './src/img');
+const imgFolder = path.join(__dirname, './img');
 
 //middleware
 
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 	next()
 })
 
-app.use( express. json() )
+app.use( express.json() )
 app.use( cors() )
 app.use( express.static(staticFolder) )
 app.use('/img', express.static(imgFolder) );
@@ -53,7 +53,6 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../build/index.html'))
 })
-	
-app.listen(PORT, () => {
+	app.listen(PORT, () => {
 		console.log('Server listening on ' + PORT);
 	})
